@@ -50,7 +50,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
                 VICTOR FERNANDES
               </span>
               <span className="text-[10px] font-mono text-zinc-400 mt-1 hidden sm:block">
-                DATA &amp; SALESFORCE
+                DATA &amp; DEVELOPER
               </span>
             </div>
           </a>
