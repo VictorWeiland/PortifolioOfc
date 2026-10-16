@@ -2,6 +2,13 @@ export type Language = 'pt' | 'en';
 
 export type ExperienceCategory = 'all' | 'tech' | 'management';
 
+export interface SocialLinks {
+  linkedin: string;
+  github: string;
+  email: string;
+  whatsapp: string;
+}
+
 export interface LanguageProficiency {
   name: string;
   level: string;
@@ -26,39 +33,55 @@ export interface ExperienceItem {
   sector: string;
   category: 'tech' | 'management';
   highlight: string;
-  summary: string;
+  impactSummary: string;
+  metricsPlaceholder?: string;
   responsibilities: string[];
   techStack: string[];
 }
 
 export interface CertificationItem {
+  id: string;
   year: string;
+  issuer: string;
   badgeLabel: string;
   title: string;
   subtitle: string;
   description: string;
+  verificationUrl: string;
   highlights: string[];
 }
 
 export interface CourseItem {
+  id: string;
   platform: string;
   category: string;
   title: string;
   description: string;
+  verificationUrl: string;
   skills: string[];
 }
 
 export interface ProjectItem {
   id: string;
+  featured?: boolean;
+  isDataProject?: boolean;
   name: string;
   category: string;
   subdomain: string;
-  url: string;
+  liveUrl: string;
+  repoUrl: string;
+  demoMedia: {
+    type: 'image' | 'video' | 'preview';
+    url: string;
+    alt: string;
+    caption: string;
+  };
   status: string;
-  uptime: string;
-  latency: string;
-  metrics: string;
-  description: string;
+  problem: string;
+  solution: string;
+  architecture?: string;
+  dataVolume?: string;
+  result: string;
   techStack: string[];
 }
 
@@ -70,29 +93,27 @@ export interface RecruiterCard {
 
 export interface PortfolioData {
   metaTitle: string;
+  metaDescription: string;
+  socials: SocialLinks;
   nav: {
-    about: string;
+    projects: string;
     experience: string;
     certifications: string;
-    projects: string;
-    recruiters: string;
+    about: string;
     contact: string;
     resumeBtn: string;
   };
   hero: {
-    badge: string;
-    subtitleParts: {
-      intro: string;
-      highlight1: string;
-      mid1: string;
-      highlight2: string;
-      mid2: string;
-      highlight3: string;
-      outro: string;
-    };
-    pills: string[];
-    ctaPrimary: string;
-    ctaSecondary: string;
+    eyebrow: string;
+    headline: string;
+    headlineAccent: string;
+    valueProposition: string;
+    primaryStackLabel: string;
+    primaryStack: string[];
+    secondaryStackLabel: string;
+    secondaryStack: string[];
+    ctaProjects: string;
+    ctaResume: string;
     cardRole: string;
   };
   about: {
@@ -119,6 +140,7 @@ export interface PortfolioData {
     filterAll: string;
     filterTech: string;
     filterManagement: string;
+    impactLabel: string;
     responsibilitiesLabel: string;
     techUsedLabel: string;
     items: ExperienceItem[];
@@ -128,6 +150,7 @@ export interface PortfolioData {
     titleStart: string;
     titleHighlight: string;
     subtitle: string;
+    verifyBadgeBtn: string;
     coursesBannerTag: string;
     coursesSubheading: string;
     certifications: CertificationItem[];
@@ -138,12 +161,16 @@ export interface PortfolioData {
     titleStart: string;
     titleHighlight: string;
     subtitle: string;
-    searchPlaceholder: string;
-    visitBtn: string;
-    caseBtn: string;
-    emptyTitle: string;
-    emptySubtitle: string;
-    categories: string[];
+    featuredBadge: string;
+    problemLabel: string;
+    solutionLabel: string;
+    architectureLabel: string;
+    dataVolumeLabel: string;
+    resultLabel: string;
+    stackLabel: string;
+    liveBtn: string;
+    repoBtn: string;
+    demoBtn: string;
     items: ProjectItem[];
   };
   recruiterSection: {
@@ -158,20 +185,11 @@ export interface PortfolioData {
     titleStart: string;
     titleHighlight: string;
     description: string;
-    whatsappTitle: string;
-    whatsappDesc: string;
-    locationTitle: string;
-    locationDesc: string;
-    formTitle: string;
-    nameLabel: string;
-    namePlaceholder: string;
     emailLabel: string;
-    emailPlaceholder: string;
-    subjectLabel: string;
-    subjectOptions: string[];
-    messageLabel: string;
-    messagePlaceholder: string;
-    submitBtn: string;
+    linkedinLabel: string;
+    githubLabel: string;
+    whatsappLabel: string;
+    resumeCta: string;
   };
   resumeModal: {
     printBtn: string;

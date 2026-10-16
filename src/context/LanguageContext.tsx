@@ -29,6 +29,10 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   useEffect(() => {
     document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en-US';
     document.title = I18N_DATA[lang].metaTitle;
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute('content', I18N_DATA[lang].metaDescription);
+    }
   }, [lang]);
 
   return (
