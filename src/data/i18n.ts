@@ -239,22 +239,6 @@ export const I18N_DATA: Record<Language, PortfolioData> = {
           ],
           techStack: ['Microsoft Power BI', 'Microsoft Excel', 'Gestão de TI', 'Gestão de Projetos', 'Gestão de Sistemas'],
         },
-        {
-          id: 'exp-5',
-          role: 'Assistente Administrativo | Consultor | Assistente de Logística',
-          period: 'Maio 2023 – Julho 2024',
-          sector: 'Telecomunicações (SMS), Saúde Suplementar & Delivery App',
-          category: 'management',
-          highlight: 'Base Sólida em Operações & Negócios',
-          impactSummary:
-            'Experiência prévia consolidada em gestão de campanhas, documentação de processos, treinamento de usuários, relatórios comerciais e controle de faturamento/estoque.',
-          responsibilities: [
-            'Assistente Administrativo (Maio 2024 – Julho 2024): Gestão de campanhas de SMS, relatórios, documentação de processos e treinamento de equipes.',
-            'Consultor de Planos de Saúde (Setembro 2023 – Dezembro 2023): Vendas consultivas, pós-venda, relatórios de conversão e campanhas.',
-            'Assistente de Logística (Maio 2023 – Agosto 2023): Controle de entrada/saída de materiais, emissão de notas fiscais e expedição de pedidos.',
-          ],
-          techStack: ['Gestão de Processos', 'Relatórios Operacionais', 'Treinamento', 'Faturamento & Notas Fiscais', 'Atendimento ao Cliente'],
-        },
       ],
     },
     coursesSection: {
