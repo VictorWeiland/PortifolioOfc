@@ -14,9 +14,9 @@ export const SOCIAL_LINKS = {
 
 export const I18N_DATA: Record<Language, PortfolioData> = {
   pt: {
-    metaTitle: 'Victor Fernandes de Almeida | Engenheiro de Dados & Desenvolvedor Salesforce',
+    metaTitle: 'Victor Fernandes de Almeida | Engenheiro de Dados e Desenvolvedor de Sistemas',
     metaDescription:
-      'Desenvolvo pipelines de dados e automações em sistemas corporativos para empresas que precisam escalar operações com segurança e eficiência.',
+      'Construo pipelines de dados escaláveis e sistemas corporativos para empresas que buscam automatizar processos e transformar dados em decisões de negócio.',
     socials: SOCIAL_LINKS,
     nav: {
       projects: 'Projetos',
@@ -29,7 +29,7 @@ export const I18N_DATA: Record<Language, PortfolioData> = {
     hero: {
       eyebrow: 'VICTOR FERNANDES DE ALMEIDA • SÃO PAULO, BRASIL',
       headline: 'Engenheiro de Dados &',
-      headlineAccent: 'Desenvolvedor Sistema',
+      headlineAccent: 'Desenvolvedor de Sistemas',
       valueProposition:
         'Construo pipelines analíticos, automações de processos e aplicações web para empresas que buscam transformar dados operacionais e fluxos manuais em sistemas rápidos e confiáveis.',
       primaryStackLabel: 'Foco Principal:',
@@ -38,7 +38,7 @@ export const I18N_DATA: Record<Language, PortfolioData> = {
       secondaryStack: ['SAP', 'Power BI', 'Next.js & TypeScript', 'Node.js', 'ServiceNow'],
       ctaProjects: 'Ver Projetos em Destaque',
       ctaResume: 'Baixar currículo (PDF)',
-      cardRole: 'Engenheiro de Dados / Desenvolvedor Sistema',
+      cardRole: 'Engenheiro de Dados / Desenvolvedor de Sistemas',
     },
     projects: {
       tag: 'Projetos Selecionados',
@@ -466,9 +466,9 @@ export const I18N_DATA: Record<Language, PortfolioData> = {
   },
 
   en: {
-    metaTitle: 'Victor Fernandes de Almeida | Data Engineer & Salesforce Developer',
+    metaTitle: 'Victor Fernandes de Almeida | Data Engineer & Systems Developer',
     metaDescription:
-      'I build data pipelines and enterprise system automations for companies that need to scale operations reliably and efficiently.',
+      'I build scalable data pipelines and enterprise systems for companies looking to automate workflows and turn data into business decisions.',
     socials: SOCIAL_LINKS,
     nav: {
       projects: 'Projects',
@@ -481,7 +481,7 @@ export const I18N_DATA: Record<Language, PortfolioData> = {
     hero: {
       eyebrow: 'VICTOR FERNANDES DE ALMEIDA • BRAZIL (REMOTE / HYBRID)',
       headline: 'Data Engineer &',
-      headlineAccent: 'Salesforce Developer',
+      headlineAccent: 'Systems Developer',
       valueProposition:
         'I build analytical data pipelines, workflow automations, and web applications for companies looking to turn operational data and manual processes into fast, reliable systems.',
       primaryStackLabel: 'Primary Focus:',
@@ -490,7 +490,7 @@ export const I18N_DATA: Record<Language, PortfolioData> = {
       secondaryStack: ['SAP', 'Power BI', 'Next.js & TypeScript', 'Node.js', 'ServiceNow'],
       ctaProjects: 'View Featured Projects',
       ctaResume: 'Download Resume (PDF)',
-      cardRole: 'SYSTEMS DEVELOPER / SYSTEMS ANALYST',
+      cardRole: 'DATA ENGINEER / SYSTEMS DEVELOPER',
     },
     projects: {
       tag: 'Selected Work',
