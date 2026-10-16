@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Check } from 'lucide-react';
+import { BarChart3, Check } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { ExperienceCategory } from '../types/portfolio';
 
@@ -18,14 +18,21 @@ export const ExperienceSection: React.FC = () => {
   );
 
   return (
-    <section id="experiencia" className="relative py-20 sm:py-28 border-t border-zinc-900">
+    <section
+      id="experiencia"
+      aria-labelledby="experience-heading"
+      className="relative py-20 sm:py-24 border-t border-zinc-900"
+    >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div>
             <span className="text-xs font-mono uppercase tracking-widest text-gold-400 block mb-2">
               {t.experience.tag}
             </span>
-            <h2 className="font-display text-3xl sm:text-4xl font-bold text-white tracking-tight">
+            <h2
+              id="experience-heading"
+              className="font-display text-3xl sm:text-4xl font-bold text-white tracking-tight"
+            >
               {t.experience.titleStart}{' '}
               <span className="bg-gradient-to-r from-gold-300 via-gold-400 to-gold-600 bg-clip-text text-transparent">
                 {t.experience.titleHighlight}
@@ -37,13 +44,19 @@ export const ExperienceSection: React.FC = () => {
           </div>
 
           {/* Experience Category Filter Buttons */}
-          <div className="flex items-center gap-2 overflow-x-auto pb-2 md:pb-0 no-scrollbar">
+          <div
+            className="flex items-center gap-2 overflow-x-auto pb-2 md:pb-0 no-scrollbar"
+            role="tablist"
+            aria-label="Filtro de área de experiência"
+          >
             {filters.map((f) => (
               <button
                 key={f.id}
                 type="button"
+                role="tab"
+                aria-selected={filter === f.id}
                 onClick={() => setFilter(f.id)}
-                className={`px-4 py-2 rounded-xl text-sm font-medium whitespace-nowrap transition-all ${
+                className={`px-4 py-2 rounded-xl text-sm font-medium whitespace-nowrap transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400 ${
                   filter === f.id
                     ? 'bg-gradient-to-r from-gold-500 to-gold-600 text-obsidian-950 font-semibold'
                     : 'bg-obsidian-900 text-zinc-400 hover:text-gold-300 border border-zinc-800'
@@ -58,10 +71,10 @@ export const ExperienceSection: React.FC = () => {
         {/* Timeline List */}
         <div className="space-y-6">
           {filteredItems.map((item, index) => (
-            <div
+            <article
               key={item.id}
               className={`rounded-2xl bg-obsidian-900/90 border ${
-                index < 3 ? 'border-gold-500/30' : 'border-zinc-800'
+                index < 3 ? 'border-gold-500/35' : 'border-zinc-800'
               } p-6 sm:p-8 animate-fadeIn`}
             >
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 mb-4 border-b border-zinc-800/80">
@@ -81,9 +94,17 @@ export const ExperienceSection: React.FC = () => {
                 </div>
               </div>
 
-              <p className="text-sm sm:text-base text-zinc-300 leading-relaxed mb-5">
-                {item.summary}
+              <p className="text-sm sm:text-base text-zinc-300 leading-relaxed mb-4">
+                {item.impactSummary}
               </p>
+
+              {/* Impact & Metrics Callout (with TODO placeholder support) */}
+              <div className="mb-5 p-3.5 rounded-xl bg-amber-950/20 border border-amber-500/30 flex items-start gap-3">
+                <BarChart3 className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
+                <p className="text-xs sm:text-sm font-mono text-amber-200/95 leading-relaxed">
+                  {item.metricsPlaceholder}
+                </p>
+              </div>
 
               <div className="mb-5">
                 <span className="text-xs font-mono uppercase tracking-wider text-gold-400 block mb-2.5">
@@ -114,7 +135,7 @@ export const ExperienceSection: React.FC = () => {
                   </span>
                 ))}
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>

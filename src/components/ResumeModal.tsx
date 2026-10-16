@@ -28,6 +28,9 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
   return (
     <div
       id="resume-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Currículo Executivo de Victor Fernandes de Almeida"
       className="fixed inset-0 z-50 bg-black/80 backdrop-blur-md overflow-y-auto p-4 sm:p-8"
     >
       <div className="max-w-5xl mx-auto my-4">
@@ -148,7 +151,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
                       {exp.sector}
                     </p>
                     <p className="text-xs sm:text-sm text-zinc-700 leading-relaxed mb-2">
-                      {exp.summary}
+                      {exp.impactSummary}
                     </p>
                     <ul className="list-disc list-inside space-y-1 text-xs sm:text-sm text-zinc-700 mb-2">
                       {exp.responsibilities.map((r) => (
