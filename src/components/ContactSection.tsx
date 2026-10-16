@@ -7,7 +7,7 @@ interface ContactSectionProps {
 }
 
 export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenResume }) => {
-  const { t } = useLanguage();
+  const { lang, t } = useLanguage();
 
   return (
     <section
@@ -110,7 +110,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenResume }) 
               <div>
                 <span className="text-sm font-bold text-white block">{t.contact.whatsappLabel}</span>
                 <span className="text-xs font-mono text-emerald-400 block mt-0.5">
-                  {t.socials.whatsappDisplay}
+                  +55 (11) 95692-0083
                 </span>
               </div>
             </a>
@@ -121,8 +121,10 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenResume }) 
             <div className="flex items-center gap-3 text-xs sm:text-sm text-zinc-400">
               <MapPin className="w-4 h-4 text-gold-400 shrink-0" />
               <span>
-                <strong className="text-zinc-200">{t.contact.locationTitle}:</strong>{' '}
-                {t.contact.locationDesc}
+                <strong className="text-zinc-200">São Paulo, SP — Brasil:</strong>{' '}
+                {lang === 'pt'
+                  ? 'Disponível para atuação remota, híbrida ou presencial.'
+                  : 'Available for remote, hybrid, or on-site roles.'}
               </span>
             </div>
 
