@@ -51,8 +51,8 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenResume }) 
               </div>
               <div>
                 <span className="text-sm font-bold text-white block">{t.contact.linkedinLabel}</span>
-                <span className="text-[11px] font-mono text-amber-300/90 block mt-0.5">
-                  TODO: URL do perfil
+                <span className="text-xs font-mono text-zinc-400 truncate block mt-0.5">
+                  in/victor-de-almeida
                 </span>
               </div>
             </a>
@@ -89,7 +89,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenResume }) 
               </div>
               <div>
                 <span className="text-sm font-bold text-white block">{t.contact.emailLabel}</span>
-                <span className="text-[11px] font-mono text-amber-300/90 truncate block mt-0.5">
+                <span className="text-[11px] font-mono text-zinc-400 truncate block mt-0.5">
                   {t.socials.email}
                 </span>
               </div>

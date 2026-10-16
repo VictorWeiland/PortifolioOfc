@@ -7,10 +7,10 @@ import { Language, PortfolioData } from '../types/portfolio';
 
 export const SOCIAL_LINKS = {
   // TODO: Substitua pela URL exata do seu perfil no LinkedIn
-  linkedin: 'https://www.linkedin.com/in/TODO-victor-fernandes',
+  linkedin: 'https://www.linkedin.com/in/victor-de-almeida/',
   github: 'https://github.com/VictorWeiland',
   // TODO: Substitua pelo seu e-mail profissional principal
-  email: 'mailto:TODO-seu-email@dominio.com',
+  email: 'victoranacletodealmeida13@gmail.com',
   whatsapp: 'https://wa.me/5511956920083',
 };
 
@@ -31,7 +31,7 @@ export const I18N_DATA: Record<Language, PortfolioData> = {
     hero: {
       eyebrow: 'VICTOR FERNANDES DE ALMEIDA • SÃO PAULO, BRASIL',
       headline: 'Engenheiro de Dados &',
-      headlineAccent: 'Desenvolvedor Salesforce',
+      headlineAccent: 'Desenvolvedor Sistema',
       valueProposition:
         'Construo pipelines analíticos, automações de processos e aplicações web para empresas que buscam transformar dados operacionais e fluxos manuais em sistemas rápidos e confiáveis.',
       primaryStackLabel: 'Foco Principal:',
@@ -40,7 +40,7 @@ export const I18N_DATA: Record<Language, PortfolioData> = {
       secondaryStack: ['SAP', 'Power BI', 'Next.js & TypeScript', 'Node.js', 'ServiceNow'],
       ctaProjects: 'Ver Projetos em Destaque',
       ctaResume: 'Baixar currículo (PDF)',
-      cardRole: 'DESENVOLVEDOR DE SISTEMAS / ANALISTA DE DADOS',
+      cardRole: 'Engenheiro de Dados / Desenvolvedor Sistema',
     },
     projects: {
       tag: 'Projetos Selecionados',
@@ -66,11 +66,9 @@ export const I18N_DATA: Record<Language, PortfolioData> = {
           category: 'SaaS & Web Full-Stack',
           subdomain: 'odonto-gest-alpha.vercel.app',
           liveUrl: 'https://odonto-gest-alpha.vercel.app/',
-          // TODO: Insira o link exato do repositório do OdontoGEST no GitHub
-          repoUrl: 'https://github.com/VictorWeiland/TODO-odontogest-repo',
+          repoUrl: 'https://github.com/VictorWeiland/OdontoGest',
           demoMedia: {
             type: 'preview',
-            // TODO: Você pode substituir por um print local ex: '/demos/odontogest.webp' ou vídeo '.mp4'
             url: 'https://odonto-gest-alpha.vercel.app/',
             alt: 'Interface da plataforma SaaS OdontoGEST exibindo busca de clínicas e agendamento online',
             caption: 'Aplicação publicada na Vercel com autenticação, painel clínico e agendamento em tempo real.',
@@ -81,37 +79,35 @@ export const I18N_DATA: Record<Language, PortfolioData> = {
           solution:
             'Desenvolvi uma plataforma SaaS completa onde pacientes localizam clínicas qualificadas e agendam consultas online 24/7, enquanto os profissionais gerenciam horários, serviços e disponibilidade em um painel centralizado.',
           result:
-            'Fluxo de agendamento 100% digitalizado em produção na Vercel, com autenticação segura, upload otimizado de mídia e carregamento rápido em dispositivos móveis (TODO: adicionar métrica de clínicas/usuários testados).',
+            'Fluxo de agendamento 100% digitalizado em produção na Vercel, com autenticação segura, upload otimizado de mídia e carregamento rápido em dispositivos móveis.',
           techStack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Prisma ORM', 'NextAuth', 'Cloudinary', 'Vercel'],
         },
         {
           id: 'proj-data-pipeline',
           featured: true,
           isDataProject: true,
-          name: 'Pipeline Lakehouse de Pedidos & Operações com PySpark e Databricks',
+          name: 'Pipeline Lakehouse ANAC & Operações com PySpark e Databricks',
           category: 'Engenharia de Dados & Big Data',
-          subdomain: 'databricks-medallion-pipeline',
-          // TODO: Insira o link do notebook público / documentação ou dashboard do pipeline
-          liveUrl: 'https://github.com/VictorWeiland/TODO-databricks-pipeline-demo',
-          // TODO: Insira o link do repositório GitHub com os scripts PySpark / SQL
-          repoUrl: 'https://github.com/VictorWeiland/TODO-databricks-pyspark-repo',
+          subdomain: 'github.com/VictorWeiland/pipeline-databricks-anac',
+          liveUrl: 'https://github.com/VictorWeiland/pipeline-databricks-anac',
+          repoUrl: 'https://github.com/VictorWeiland/pipeline-databricks-anac',
           demoMedia: {
             type: 'preview',
-            url: '#projetos',
+            url: 'https://github.com/VictorWeiland/pipeline-databricks-anac',
             alt: 'Diagrama da arquitetura Medallion (Bronze, Silver, Gold) no Databricks com PySpark e Delta Lake',
             caption: 'Pipeline estruturado em camadas Bronze → Silver → Gold com validação de qualidade de dados.',
           },
           status: 'ENGENHARIA DE DADOS',
           problem:
-            'Dados de pedidos, faturamento e clientes vindos de múltiplas fontes (arquivos brutos e bancos relacionais) apresentavam inconsistências, atrasando relatórios gerenciais e auditorias operacionais.',
+            'Dados públicos e operacionais brutos vindos de múltiplas fontes apresentavam inconsistências de schema e duplicidades, dificultando consultas analíticas rápidas e auditorias.',
           solution:
             'Construção de um pipeline ETL distribuído utilizando Apache Spark (PySpark) e SQL no Databricks, aplicando limpeza, deduplicação, regras de negócio e armazenamento transacional em Delta Lake.',
           architecture:
             'Arquitetura Medallion no Databricks: Ingestão bruta (Bronze) → Limpeza, tipagem e validação com PySpark/SQL (Silver) → Tabelas agregadas para BI e Analytics (Gold) orquestradas via Databricks Workflows.',
           dataVolume:
-            'TODO: Inserir volume de dados processados (ex.: X milhões de registros / Y GB por lote diário em tabelas Delta).',
+            'Processamento em lote distribuído via PySpark com particionamento otimizado em tabelas Delta Lake para consultas analíticas de alta performance.',
           result:
-            'Padronização e confiabilidade das tabelas analíticas para consumo direto em Power BI e SQL (TODO: inserir redução no tempo de processamento, ex.: de Xh para Y minutos).',
+            'Padronização e confiabilidade das tabelas analíticas na camada Gold prontas para consumo direto em SQL e dashboards de Business Intelligence.',
           techStack: ['Databricks', 'Apache Spark', 'PySpark', 'Delta Lake', 'Python', 'SQL', 'Power BI'],
         },
         {
@@ -120,8 +116,7 @@ export const I18N_DATA: Record<Language, PortfolioData> = {
           category: 'E-Commerce & Automação Comercial',
           subdomain: 'cardapio-massas-artesanais.vercel.app',
           liveUrl: 'https://cardapio-massas-artesanais.vercel.app/',
-          // TODO: Insira o link exato do repositório de O Padeiro no GitHub
-          repoUrl: 'https://github.com/VictorWeiland/TODO-cardapio-massas-repo',
+          repoUrl: 'https://github.com/VictorWeiland/CardapioMassasArtesanais',
           demoMedia: {
             type: 'preview',
             url: 'https://cardapio-massas-artesanais.vercel.app/',
@@ -143,7 +138,7 @@ export const I18N_DATA: Record<Language, PortfolioData> = {
           category: 'Salesforce CRM Corporativo',
           subdomain: 'Case Corporativo • Instituição Financeira',
           liveUrl: '#experiencia',
-          repoUrl: '#experiencia',
+          repoUrl: 'https://github.com/VictorWeiland',
           demoMedia: {
             type: 'preview',
             url: '#experiencia',
@@ -156,7 +151,7 @@ export const I18N_DATA: Record<Language, PortfolioData> = {
           solution:
             'Desenvolvimento de classes Apex, componentes Lightning/LWC, fórmulas avançadas e Flows automatizados, além de configuração de objetos, layouts e suporte às integrações.',
           result:
-            'Estabilidade contínua da plataforma Salesforce e redução de etapas manuais na operação bancária (TODO: inserir quantidade média de chamados/melhorias entregues no período).',
+            'Estabilidade contínua da plataforma Salesforce, cumprimento rigoroso de SLA e redução de etapas manuais na operação bancária.',
           techStack: ['Salesforce Admin', 'Apex', 'Lightning LWC', 'Salesforce Flow', 'Process Builder', 'Fórmulas'],
         },
       ],
@@ -184,7 +179,7 @@ export const I18N_DATA: Record<Language, PortfolioData> = {
           impactSummary:
             'Otimização de fluxos operacionais e integração entre plataformas de CRM (Salesforce), ERP (SAP) e bancos de dados SQL em projetos corporativos multidisciplinares.',
           metricsPlaceholder:
-            'TODO: Inserir métrica de impacto geral (ex.: X projetos corporativos atendidos / Y% de melhoria no SLA de entregas ágeis).',
+            'Impacto: Automação de processos críticos de negócio, redução de retrabalho operacional e entregas consistentes em sprints ágeis.',
           responsibilities: [
             'Análise e implementação de melhorias e automações para reduzir retrabalho operacional e elevar a experiência do usuário.',
             'Atuação direta na integração de sistemas, validação de dados com SQL/Python e suporte técnico especializado.',
@@ -202,7 +197,7 @@ export const I18N_DATA: Record<Language, PortfolioData> = {
           impactSummary:
             'Garantiu a consistência de dados entre o SAP e bancos relacionais na operação de gestão de pedidos, contribuindo diretamente para a estabilidade do projeto e para a renovação do contrato por duas vezes.',
           metricsPlaceholder:
-            'TODO: Inserir volume operacional (ex.: validação de +X mil pedidos/mês no SAP e redução de Y% em incidentes de faturamento).',
+            'Resultado de Destaque: Alta confiabilidade operacional no fluxo de pedidos SAP/SQL, resultando na extensão do contrato do projeto por 2 vezes consecutivas.',
           responsibilities: [
             'Auditoria e validação diária de pedidos no SAP e via consultas SQL para prevenir falhas de processamento e entrega.',
             'Investigação de inconsistências em cadastros de produtos/clientes e gestão do ciclo de vida de pedidos.',
@@ -220,7 +215,7 @@ export const I18N_DATA: Record<Language, PortfolioData> = {
           impactSummary:
             'Manteve a continuidade operacional e evoluiu funcionalidades críticas do Salesforce para instituição bancária por meio de customizações em Apex, Flows e integração com sistemas legados.',
           metricsPlaceholder:
-            'TODO: Inserir métrica do projeto bancário (ex.: 100% de cumprimento de SLA em incidentes críticos / X automações em Flow e Apex entregues).',
+            'Impacto: Estabilidade contínua do CRM bancário e automação de regras de negócio complexas com Apex, Flows e Lightning Components.',
           responsibilities: [
             'Desenvolvimento de código Apex e manutenção de fórmulas complexas para regras de negócio financeiras.',
             'Criação de Flows para automatizar aprovações e processos internos do banco.',
@@ -238,7 +233,7 @@ export const I18N_DATA: Record<Language, PortfolioData> = {
           impactSummary:
             'Estruturou a gestão do departamento de TI, projetos e sistemas da empresa, implementando painéis de indicadores em Power BI e Excel para apoiar decisões da diretoria.',
           metricsPlaceholder:
-            'TODO: Inserir resultado da gestão (ex.: liderança de equipe de X pessoas / Y dashboards estratégicos implantados).',
+            'Impacto: Centralização da governança de TI e visibilidade executiva em tempo real por meio de dashboards em Power BI.',
           responsibilities: [
             'Gestão completa do departamento de TI, infraestrutura, sistemas internos e fornecedores.',
             'Liderança de pessoas e gerenciamento de cronogramas de projetos tecnológicos.',
@@ -270,7 +265,7 @@ export const I18N_DATA: Record<Language, PortfolioData> = {
       titleHighlight: 'Formação Especializada',
       subtitle:
         'Certificações oficiais e cursos práticos concluídos com foco em Engenharia de Dados (Databricks, Spark, PySpark), Administração/Desenvolvimento Salesforce, Python e SQL.',
-      verifyBadgeBtn: 'Verificar Credencial',
+      verifyBadgeBtn: 'Verificar no LinkedIn',
       coursesBannerTag: 'CURSOS PRÁTICOS CONCLUÍDOS • UDEMY',
       coursesSubheading: 'Formação em Engenharia de Dados, Salesforce, Python & SQL',
       certifications: [
@@ -283,8 +278,7 @@ export const I18N_DATA: Record<Language, PortfolioData> = {
           subtitle: 'Inteligência Artificial & Automação de Processos',
           description:
             'Certificação de fundamentos de Inteligência Artificial aplicados à otimização de processos corporativos, produtividade e governança.',
-          // TODO: Insira o link público de verificação (Credly / certificado PDF)
-          verificationUrl: 'https://github.com/VictorWeiland#TODO-link-verificacao-activate-ai',
+          verificationUrl: 'https://www.linkedin.com/in/victor-de-almeida/',
           highlights: [
             'Fundamentos de IA Generativa e Analítica',
             'Aplicação prática em fluxos de trabalho corporativos',
@@ -300,8 +294,7 @@ export const I18N_DATA: Record<Language, PortfolioData> = {
           subtitle: 'Sistemas Financeiros & Operações Bancárias',
           description:
             'Certificação de domínio funcional e técnico em operações bancárias globais, regras de negócio do setor financeiro e plataformas críticas.',
-          // TODO: Insira o link público de verificação do certificado Global Banking
-          verificationUrl: 'https://github.com/VictorWeiland#TODO-link-verificacao-global-banking',
+          verificationUrl: 'https://www.linkedin.com/in/victor-de-almeida/',
           highlights: [
             'Arquitetura de processos e operações bancárias',
             'Sustentação de sistemas financeiros de alta disponibilidade',
@@ -317,8 +310,7 @@ export const I18N_DATA: Record<Language, PortfolioData> = {
           subtitle: 'Indústria Automotiva & Cadeia Produtiva',
           description:
             'Certificação em processos digitais e integração de sistemas (ERP/CRM) voltados à cadeia automotiva, gestão de pedidos e pós-venda.',
-          // TODO: Insira o link público de verificação do certificado Automotive
-          verificationUrl: 'https://github.com/VictorWeiland#TODO-link-verificacao-automotive',
+          verificationUrl: 'https://www.linkedin.com/in/victor-de-almeida/',
           highlights: [
             'Gestão de ciclo de vida de pedidos e cadeia logística',
             'Integração entre plataformas ERP e CRM no setor industrial',
@@ -334,8 +326,7 @@ export const I18N_DATA: Record<Language, PortfolioData> = {
           title: 'Engenharia de Dados com Databricks, Spark e PySpark',
           description:
             'Construção de pipelines ETL distribuídos, processamento de grandes volumes com Apache Spark e PySpark e arquitetura Lakehouse no Databricks.',
-          // TODO: Insira a URL do certificado da Udemy (ex: https://www.udemy.com/certificate/UC-XXXX/)
-          verificationUrl: 'https://www.udemy.com/certificate/TODO-databricks-spark-pyspark',
+          verificationUrl: 'https://www.linkedin.com/in/victor-de-almeida/',
           skills: ['Databricks', 'Apache Spark', 'PySpark', 'Lakehouse ETL'],
         },
         {
@@ -345,8 +336,7 @@ export const I18N_DATA: Record<Language, PortfolioData> = {
           title: 'Databricks Certified Data Engineer Professional',
           description:
             'Otimização com Delta Lake, orquestração de Databricks Workflows, governança, processamento batch/streaming e performance tuning.',
-          // TODO: Insira a URL do certificado da Udemy
-          verificationUrl: 'https://www.udemy.com/certificate/TODO-databricks-professional',
+          verificationUrl: 'https://www.linkedin.com/in/victor-de-almeida/',
           skills: ['Delta Lake', 'Databricks Workflows', 'Data Governance', 'Streaming & Batch'],
         },
         {
@@ -356,8 +346,7 @@ export const I18N_DATA: Record<Language, PortfolioData> = {
           title: 'Salesforce na Prática — Curso Hands-On Administradores',
           description:
             'Administração prática do Salesforce: objetos customizados, layouts, permissões, automação com Flows, fórmulas e relatórios gerenciais.',
-          // TODO: Insira a URL do certificado da Udemy
-          verificationUrl: 'https://www.udemy.com/certificate/TODO-salesforce-admin-handson',
+          verificationUrl: 'https://www.linkedin.com/in/victor-de-almeida/',
           skills: ['Salesforce Admin', 'Flows & Fórmulas', 'Objetos & Layouts', 'Perfis & Segurança'],
         },
         {
@@ -367,8 +356,7 @@ export const I18N_DATA: Record<Language, PortfolioData> = {
           title: 'Programação com Python do Zero ao Avançado',
           description:
             'Domínio de Python: lógica, estruturas de dados, programação orientada a objetos, automação de scripts e análise de dados com Pandas.',
-          // TODO: Insira a URL do certificado da Udemy
-          verificationUrl: 'https://www.udemy.com/certificate/TODO-python-zero-ao-avancado',
+          verificationUrl: 'https://www.linkedin.com/in/victor-de-almeida/',
           skills: ['Python Avançado', 'POO', 'Pandas', 'Automação'],
         },
         {
@@ -378,8 +366,7 @@ export const I18N_DATA: Record<Language, PortfolioData> = {
           title: 'Banco de Dados SQL do Zero ao Avançado',
           description:
             'Modelagem relacional, consultas avançadas (JOINs, Subqueries, Views, Índices e Agregações), auditoria e análise de dados em SQL e MySQL.',
-          // TODO: Insira a URL do certificado da Udemy
-          verificationUrl: 'https://www.udemy.com/certificate/TODO-sql-zero-ao-avancado',
+          verificationUrl: 'https://www.linkedin.com/in/victor-de-almeida/',
           skills: ['SQL Avançado', 'MySQL', 'Modelagem Relacional', 'Performance SQL'],
         },
       ],
@@ -546,7 +533,7 @@ export const I18N_DATA: Record<Language, PortfolioData> = {
           category: 'SaaS & Full-Stack Web',
           subdomain: 'odonto-gest-alpha.vercel.app',
           liveUrl: 'https://odonto-gest-alpha.vercel.app/',
-          repoUrl: 'https://github.com/VictorWeiland/TODO-odontogest-repo',
+          repoUrl: 'https://github.com/VictorWeiland/OdontoGest',
           demoMedia: {
             type: 'preview',
             url: 'https://odonto-gest-alpha.vercel.app/',
@@ -559,35 +546,35 @@ export const I18N_DATA: Record<Language, PortfolioData> = {
           solution:
             'Built a complete multi-clinic SaaS platform where patients find qualified clinics and book appointments online 24/7, while healthcare professionals manage schedules and services in a centralized dashboard.',
           result:
-            '100% digitalized booking workflow live on Vercel with secure authentication, cloud media handling, and mobile-first responsiveness (TODO: add clinic/user test metrics).',
+            '100% digitalized booking workflow live on Vercel with secure authentication, cloud media handling, and mobile-first responsiveness.',
           techStack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Prisma ORM', 'NextAuth', 'Cloudinary', 'Vercel'],
         },
         {
           id: 'proj-data-pipeline',
           featured: true,
           isDataProject: true,
-          name: 'Order & Operations Lakehouse Pipeline with PySpark & Databricks',
+          name: 'ANAC & Operations Lakehouse Pipeline with PySpark & Databricks',
           category: 'Data Engineering & Big Data',
-          subdomain: 'databricks-medallion-pipeline',
-          liveUrl: 'https://github.com/VictorWeiland/TODO-databricks-pipeline-demo',
-          repoUrl: 'https://github.com/VictorWeiland/TODO-databricks-pyspark-repo',
+          subdomain: 'github.com/VictorWeiland/pipeline-databricks-anac',
+          liveUrl: 'https://github.com/VictorWeiland/pipeline-databricks-anac',
+          repoUrl: 'https://github.com/VictorWeiland/pipeline-databricks-anac',
           demoMedia: {
             type: 'preview',
-            url: '#projetos',
+            url: 'https://github.com/VictorWeiland/pipeline-databricks-anac',
             alt: 'Databricks Medallion Architecture diagram (Bronze, Silver, Gold) using PySpark and Delta Lake',
             caption: 'End-to-end Bronze → Silver → Gold data pipeline with automated data quality checks.',
           },
           status: 'DATA ENGINEERING',
           problem:
-            'Order, billing, and customer data coming from multiple sources had schema inconsistencies and duplicates, delaying executive reporting and operational audits.',
+            'Raw public and operational datasets from multiple sources had schema inconsistencies and duplicates, delaying executive reporting and operational audits.',
           solution:
             'Engineered a distributed ETL pipeline using Apache Spark (PySpark) and SQL on Databricks, applying data cleansing, deduplication, business rules, and ACID storage in Delta Lake.',
           architecture:
             'Medallion Architecture on Databricks: Raw Ingestion (Bronze) → Cleansing, schema enforcement & validation with PySpark/SQL (Silver) → Aggregated business tables for BI (Gold) orchestrated via Databricks Workflows.',
           dataVolume:
-            'TODO: Insert processed data volume (e.g., X million records / Y GB per daily batch in Delta tables).',
+            'Distributed batch processing via PySpark with optimized partitioning in Delta Lake tables for high-performance analytical queries.',
           result:
-            'Standardized, audit-ready analytical tables for direct consumption in Power BI and SQL (TODO: insert processing time reduction, e.g., from X hours to Y minutes).',
+            'Standardized, audit-ready analytical tables in the Gold layer for direct consumption in SQL and Business Intelligence dashboards.',
           techStack: ['Databricks', 'Apache Spark', 'PySpark', 'Delta Lake', 'Python', 'SQL', 'Power BI'],
         },
         {
@@ -596,7 +583,7 @@ export const I18N_DATA: Record<Language, PortfolioData> = {
           category: 'E-Commerce & Commercial Automation',
           subdomain: 'cardapio-massas-artesanais.vercel.app',
           liveUrl: 'https://cardapio-massas-artesanais.vercel.app/',
-          repoUrl: 'https://github.com/VictorWeiland/TODO-cardapio-massas-repo',
+          repoUrl: 'https://github.com/VictorWeiland/CardapioMassasArtesanais',
           demoMedia: {
             type: 'preview',
             url: 'https://cardapio-massas-artesanais.vercel.app/',
@@ -618,7 +605,7 @@ export const I18N_DATA: Record<Language, PortfolioData> = {
           category: 'Enterprise Salesforce CRM',
           subdomain: 'Enterprise Case • Banking Institution',
           liveUrl: '#experiencia',
-          repoUrl: '#experiencia',
+          repoUrl: 'https://github.com/VictorWeiland',
           demoMedia: {
             type: 'preview',
             url: '#experiencia',
@@ -631,7 +618,7 @@ export const I18N_DATA: Record<Language, PortfolioData> = {
           solution:
             'Developed custom Apex code, Lightning/LWC components, complex business rule formulas, and automated Flows while configuring objects, layouts, and legacy integrations.',
           result:
-            'Maintained high platform availability and reduced manual steps in banking workflows (TODO: insert average number of tickets/enhancements delivered).',
+            'Maintained high platform availability, strict SLA compliance, and reduced manual steps in banking workflows.',
           techStack: ['Salesforce Admin', 'Apex', 'Lightning LWC', 'Salesforce Flow', 'Process Builder', 'Formulas'],
         },
       ],
@@ -659,7 +646,7 @@ export const I18N_DATA: Record<Language, PortfolioData> = {
           impactSummary:
             'Optimized operational workflows and system integrations across CRM (Salesforce), ERP (SAP), and SQL databases within agile multidisciplinary teams.',
           metricsPlaceholder:
-            'TODO: Insert overall impact metric (e.g., X enterprise projects supported / Y% improvement in agile delivery SLA).',
+            'Impact: Automated mission-critical business processes, reduced manual rework, and delivered continuous value in agile sprints.',
           responsibilities: [
             'Analyzed and implemented process automations and system improvements to reduce manual rework and improve UX.',
             'Worked on enterprise system integrations, SQL/Python data validation, and specialized technical support.',
@@ -677,7 +664,7 @@ export const I18N_DATA: Record<Language, PortfolioData> = {
           impactSummary:
             'Ensured end-to-end data consistency between SAP and relational databases in order management operations, directly contributing to project stability and extending the contract twice.',
           metricsPlaceholder:
-            'TODO: Insert operational volume (e.g., validated +X thousand orders/month in SAP and reduced billing/order issues by Y%).',
+            'Key Outcome: High operational reliability across SAP/SQL order workflows, resulting in the project contract being extended twice consecutively.',
           responsibilities: [
             'Monitored and audited customer orders in SAP and via SQL queries to guarantee accurate processing and fulfillment.',
             'Investigated product and customer data inconsistencies and managed the full order lifecycle.',
@@ -695,7 +682,7 @@ export const I18N_DATA: Record<Language, PortfolioData> = {
           impactSummary:
             'Ensured operational continuity and enhanced mission-critical Salesforce functionalities for a bank through Apex customizations, automated Flows, and legacy system integrations.',
           metricsPlaceholder:
-            'TODO: Insert banking project metric (e.g., 100% SLA compliance on critical incidents / X Flows and Apex improvements deployed).',
+            'Impact: Continuous stability of the banking CRM and automation of complex financial business rules using Apex, Flows, and Lightning Components.',
           responsibilities: [
             'Developed Apex classes and maintained complex formulas to enforce banking business rules.',
             'Implemented automated Flows to streamline internal banking approvals and processes.',
@@ -713,7 +700,7 @@ export const I18N_DATA: Record<Language, PortfolioData> = {
           impactSummary:
             'Led the company’s IT department, projects, and internal systems, implementing executive Power BI and Excel dashboards to drive leadership decisions.',
           metricsPlaceholder:
-            'TODO: Insert management outcome (e.g., led a team of X people / deployed Y executive KPI dashboards).',
+            'Impact: Centralized IT governance and provided real-time executive visibility through Power BI KPI dashboards.',
           responsibilities: [
             'Managed the IT department, technology infrastructure, internal systems, and vendor operations.',
             'Led multidisciplinary staff and oversaw technology project timelines.',
@@ -745,7 +732,7 @@ export const I18N_DATA: Record<Language, PortfolioData> = {
       titleHighlight: 'Specialized Training',
       subtitle:
         'Official industry and AI certifications combined with hands-on courses in Data Engineering (Databricks, Spark, PySpark), Salesforce Administration/Development, Python, and SQL.',
-      verifyBadgeBtn: 'Verify Credential',
+      verifyBadgeBtn: 'Verify on LinkedIn',
       coursesBannerTag: 'COMPLETED HANDS-ON COURSES • UDEMY',
       coursesSubheading: 'Training in Data Engineering, Salesforce, Python & SQL',
       certifications: [
@@ -758,7 +745,7 @@ export const I18N_DATA: Record<Language, PortfolioData> = {
           subtitle: 'Artificial Intelligence & Process Automation',
           description:
             'Certification in Artificial Intelligence fundamentals applied to business workflow optimization, productivity, and governance.',
-          verificationUrl: 'https://github.com/VictorWeiland#TODO-link-verificacao-activate-ai',
+          verificationUrl: 'https://www.linkedin.com/in/victor-de-almeida/',
           highlights: [
             'Generative & Analytical AI Fundamentals',
             'Practical application in enterprise workflows',
@@ -774,7 +761,7 @@ export const I18N_DATA: Record<Language, PortfolioData> = {
           subtitle: 'Financial Systems & Banking Operations',
           description:
             'Functional and technical domain certification in global banking operations, financial business rules, and mission-critical platforms.',
-          verificationUrl: 'https://github.com/VictorWeiland#TODO-link-verificacao-global-banking',
+          verificationUrl: 'https://www.linkedin.com/in/victor-de-almeida/',
           highlights: [
             'Banking core processes and system architecture',
             'High-availability financial platform support',
@@ -790,7 +777,7 @@ export const I18N_DATA: Record<Language, PortfolioData> = {
           subtitle: 'Automotive Industry & Value Chain',
           description:
             'Certification in digital processes and ERP/CRM integration for the automotive industry, covering order lifecycle and supply chain.',
-          verificationUrl: 'https://github.com/VictorWeiland#TODO-link-verificacao-automotive',
+          verificationUrl: 'https://www.linkedin.com/in/victor-de-almeida/',
           highlights: [
             'Order lifecycle management & supply chain workflows',
             'ERP and CRM integration across industrial operations',
@@ -806,7 +793,7 @@ export const I18N_DATA: Record<Language, PortfolioData> = {
           title: 'Data Engineering with Databricks, Spark and PySpark',
           description:
             'Building distributed ETL pipelines, large-scale data processing with Apache Spark and PySpark, and Lakehouse architecture on Databricks.',
-          verificationUrl: 'https://www.udemy.com/certificate/TODO-databricks-spark-pyspark',
+          verificationUrl: 'https://www.linkedin.com/in/victor-de-almeida/',
           skills: ['Databricks', 'Apache Spark', 'PySpark', 'Lakehouse ETL'],
         },
         {
@@ -816,7 +803,7 @@ export const I18N_DATA: Record<Language, PortfolioData> = {
           title: 'Databricks Certified Data Engineer Professional',
           description:
             'Delta Lake optimization, Databricks Workflows orchestration, data governance, batch/streaming pipelines, and performance tuning.',
-          verificationUrl: 'https://www.udemy.com/certificate/TODO-databricks-professional',
+          verificationUrl: 'https://www.linkedin.com/in/victor-de-almeida/',
           skills: ['Delta Lake', 'Databricks Workflows', 'Data Governance', 'Streaming & Batch'],
         },
         {
@@ -826,7 +813,7 @@ export const I18N_DATA: Record<Language, PortfolioData> = {
           title: 'Hands-On Salesforce Administration Practice Course',
           description:
             'Practical Salesforce administration: custom objects, page layouts, permissions, Flow automation, complex formulas, and analytical reports.',
-          verificationUrl: 'https://www.udemy.com/certificate/TODO-salesforce-admin-handson',
+          verificationUrl: 'https://www.linkedin.com/in/victor-de-almeida/',
           skills: ['Salesforce Admin', 'Flows & Formulas', 'Objects & Layouts', 'Profiles & Security'],
         },
         {
@@ -836,7 +823,7 @@ export const I18N_DATA: Record<Language, PortfolioData> = {
           title: 'Python Programming from Zero to Advanced',
           description:
             'Comprehensive Python mastery: logic, data structures, OOP, script automation, and operational data analysis with Pandas.',
-          verificationUrl: 'https://www.udemy.com/certificate/TODO-python-zero-ao-avancado',
+          verificationUrl: 'https://www.linkedin.com/in/victor-de-almeida/',
           skills: ['Advanced Python', 'OOP', 'Pandas', 'Automation'],
         },
         {
@@ -846,7 +833,7 @@ export const I18N_DATA: Record<Language, PortfolioData> = {
           title: 'SQL Database from Zero to Advanced',
           description:
             'Relational data modeling, advanced queries (JOINs, Subqueries, Views, Indexes, and Aggregations), auditing, and data analysis in SQL and MySQL.',
-          verificationUrl: 'https://www.udemy.com/certificate/TODO-sql-zero-ao-avancado',
+          verificationUrl: 'https://www.linkedin.com/in/victor-de-almeida/',
           skills: ['Advanced SQL', 'MySQL', 'Relational Modeling', 'SQL Performance'],
         },
       ],
