@@ -278,20 +278,10 @@ export const ProjectsShowcase: React.FC = () => {
                       href={p.repoUrl}
                       target={isRepoExternal ? '_blank' : undefined}
                       rel={isRepoExternal ? 'noopener noreferrer' : undefined}
-                      title={
-                        p.repoUrl.includes('TODO')
-                          ? 'TODO: Substituir pela URL do repositório em src/data/i18n.ts'
-                          : p.repoUrl
-                      }
                       className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-obsidian-950 hover:bg-obsidian-800 text-zinc-300 hover:text-gold-300 border border-zinc-700 hover:border-gold-500/40 font-semibold text-xs transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400"
                     >
                       <GitBranch className="w-3.5 h-3.5" />
                       <span>{t.projects.repoBtn}</span>
-                      {p.repoUrl.includes('TODO') && (
-                        <span className="text-[10px] font-mono px-1.5 py-0.2 rounded bg-amber-500/20 text-amber-300 border border-amber-500/40">
-                          TODO
-                        </span>
-                      )}
                     </a>
                   </div>
                 </div>

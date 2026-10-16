@@ -2,14 +2,12 @@ import { Language, PortfolioData } from '../types/portfolio';
 
 /**
  * ARQUIVO CENTRAL DE DADOS DO PORTFÓLIO — VICTOR FERNANDES DE ALMEIDA
- * Edite facilmente seus links, projetos, métricas (marcadas com TODO), certificações e experiências aqui.
+ * Edite facilmente seus links, projetos, métricas, certificações e experiências aqui.
  */
 
 export const SOCIAL_LINKS = {
-  // TODO: Substitua pela URL exata do seu perfil no LinkedIn
   linkedin: 'https://www.linkedin.com/in/victor-de-almeida/',
   github: 'https://github.com/VictorWeiland',
-  // TODO: Substitua pelo seu e-mail profissional principal
   email: 'victoranacletodealmeida13@gmail.com',
   whatsapp: 'https://wa.me/5511956920083',
 };
@@ -384,9 +382,10 @@ export const I18N_DATA: Record<Language, PortfolioData> = {
       coursesResumeTitle: 'Cursos Especializados (Udemy)',
       langTitle: 'Idiomas',
       langNote:
-        'Português nativo e Inglês técnico para leitura de documentação, código e ferramentas globais.',
+        'Português nativo, Espanhol intermediário e Inglês técnico para leitura de documentação, código e ferramentas globais.',
       languages: [
         { name: 'Português', level: 'Nativo / Fluente', dots: 5 },
+        { name: 'Espanhol', level: 'Intermediário', dots: 3 },
         { name: 'Inglês', level: 'Básico / Técnico', dots: 1 },
       ],
       hardSkills: [
@@ -851,9 +850,10 @@ export const I18N_DATA: Record<Language, PortfolioData> = {
       coursesResumeTitle: 'Specialized Courses (Udemy)',
       langTitle: 'Languages',
       langNote:
-        'Native Portuguese and Technical English for system documentation, code, and global tools.',
+        'Native Portuguese, Intermediate Spanish, and Technical English for system documentation, code, and global tools.',
       languages: [
         { name: 'Portuguese (Português)', level: 'Native / Fluent', dots: 5 },
+        { name: 'Spanish (Espanhol)', level: 'Intermediate', dots: 3 },
         { name: 'English (Inglês)', level: 'Basic / Technical', dots: 1 },
       ],
       hardSkills: [
