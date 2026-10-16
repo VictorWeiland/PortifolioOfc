@@ -21,12 +21,12 @@ export const App: React.FC = () => {
 
         <main id="inicio" className="flex-1">
           <Hero onOpenResume={() => setResumeOpen(true)} />
-          <AboutSkills />
+          <ProjectsShowcase />
           <ExperienceSection />
           <CoursesCertifications />
-          <ProjectsShowcase />
+          <AboutSkills />
           <RecruiterValue />
-          <ContactSection />
+          <ContactSection onOpenResume={() => setResumeOpen(true)} />
         </main>
 
         <Footer />
